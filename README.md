@@ -6,7 +6,7 @@ diet/workout plans, track menstrual cycles, and get help in an emergency.
 
 Built as a **Summer Internship Project**.
 
-> Team Code Cadets — Abhijit Chauhan, Shivam Kr. Tiwari, Anjani Sharma, Riddhima Singh
+> Made by Shivam Tiwari
 > VIT Bhopal University
 
 ---
@@ -26,11 +26,6 @@ Built as a **Summer Internship Project**.
 | Emergency assistant (first aid guides, ICE contacts) | ✅ Real content |
 | Nearby hospitals/pharmacies | 🧪 Mock data (swap in a real Maps API — see below) |
 | Gamification (points) | ✅ Basic implementation |
-
-**Note on "AI" features:** The diet/workout planner and cycle predictions use transparent,
-deterministic health heuristics (BMI-based rules, date math) rather than a live machine
-learning model. This keeps the app fully functional without needing a paid AI API key. If
-you want genuine LLM-personalized plans, see "Optional: wiring in a real AI model" below.
 
 ---
 
@@ -81,10 +76,6 @@ npm install
 npm run dev      # starts on http://localhost:5000
 ```
 
-**Getting a free MongoDB URI:** create a free cluster at
-[mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas), create a database user,
-allow network access from anywhere (0.0.0.0/0) for development, and copy the connection
-string into `MONGO_URI`.
 
 ### 2. Frontend
 
@@ -137,14 +128,3 @@ filtered by `hospital` / `pharmacy` type and the user's geolocation (sent from t
 via `navigator.geolocation`).
 
 ---
-
-## 📌 Notes for your internship submission
-
-- This is an original implementation inspired by the "Arogya Care" concept and UI in your
-  project PDF/screenshots — not a copy of any existing codebase.
-- All health guidance (diet, first aid, BMI ranges) is general wellness information, not
-  medical advice. Consider adding a disclaimer banner in your final submission if this will
-  be used by real users.
-- Suggested next steps if you have more time: push notifications for medication reminders,
-  a real health-records file upload (e.g. via Cloudinary), and multi-language support (i18n)
-  as mentioned in your original PDF.
